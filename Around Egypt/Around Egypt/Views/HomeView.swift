@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    var recommended: [Experience] = sampleExperiences.filter { $0.isRecommended }
-    var recent: [Experience] = sampleExperiences
+    @StateObject private var viewModel = HomeViewModel()
+    @State private var searchText = ""
     
     var body: some View {
         NavigationView {
@@ -18,16 +18,24 @@ struct HomeView: View {
                     
                     // Search bar
                     HStack {
-                        Image(systemName: "magnifyingglass")
-                        TextField("Try “Luxor”", text: .constant(""))
-                            .textFieldStyle(PlainTextFieldStyle())
                         Spacer()
+                        
+                        Image(systemName: "line.3.horizontal")
+                        
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                            TextField("Try “Luxor”", text: .constant(""))
+                                .textFieldStyle(PlainTextFieldStyle())
+                                .padding()
+                        }
+                        .background(Color(.systemGray6))
+                        .cornerRadius(12)
+                        
                         Image(systemName: "slider.horizontal.3")
+                        
+                        Spacer()
                     }
-                    .padding()
-                    .background(Color(.systemGray6))
-                    .cornerRadius(12)
-                    .padding(.horizontal)
+                    .padding(.horizontal, 20)
                     
                     // Welcome text
                     VStack(alignment: .leading, spacing: 4) {
@@ -36,41 +44,43 @@ struct HomeView: View {
                             .bold()
                         Text("Now you can explore any experience in 360 degrees and get all the details about it all in one place.")
                             .font(.subheadline)
-                            .foregroundColor(.black)
                     }
-                    .padding(.horizontal)
+                    .padding(.leading, 25)
                     
                     // Recommended section
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Recommended Experiences")
                             .font(.title2)
                             .fontWeight(.bold)
-                            .padding(.horizontal)
                         
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 16) {
-                                ForEach(recommended) { item in
-                                    ExperienceCard(experience: item)
+                        if viewModel.isLoading {
+                            ProgressView().padding()
+                        } else {
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: 16) {
+                                    ForEach(viewModel.recommended) { exp in
+                                        ExperienceCard(experience: exp)
+                                    }
                                 }
                             }
-                            .padding(.horizontal)
                         }
+                        
                     }
+                    .padding(.horizontal, 25)
                     
-                    // Recommended section
+                    // Recent section
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Most Recent")
                             .font(.title2)
                             .fontWeight(.bold)
-                            .padding(.horizontal)
+                            .padding(.leading, 25)
                         
-                        ScrollView(.vertical, showsIndicators: false) {
+                        ScrollView(showsIndicators: false) {
                             VStack(spacing: 16) {
-                                ForEach(recent) { item in
-                                    ExperienceCard(experience: item)
+                                ForEach(viewModel.recent) { exp in
+                                    ExperienceCard(experience: exp)
                                 }
                             }
-                            .padding(.horizontal)
                         }
                     }
                 }

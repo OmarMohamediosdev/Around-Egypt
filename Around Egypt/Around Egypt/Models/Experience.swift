@@ -7,39 +7,54 @@
 
 import Foundation
 
-struct Experience: Identifiable {
-    let id = UUID()
-    let title: String
-    let location: String
-    let imageName: String
-    let views: Int
-    let likes: Int
-    let isRecommended: Bool
-    let description: String
+// MARK: - Experience
+nonisolated struct Experience: Codable {
+    let data: [ExperienceDatum]?
 }
 
-let sampleExperiences = [
-    Experience(title: "Nubian House",
-               location: "Aswan, Egypt",
-               imageName: "nubian",
-               views: 156,
-               likes: 372,
-               isRecommended: true,
-               description: "A colorful Nubian house experience."),
-    
-    Experience(title: "Egyptian Desert",
-               location: "Egypt",
-               imageName: "desert",
-               views: 156,
-               likes: 45,
-               isRecommended: false,
-               description: "Experience the vast Egyptian desert in 360 degrees."),
-    
-    Experience(title: "Pyramids of Giza",
-               location: "Cairo, Egypt",
-               imageName: "pyramids",
-               views: 156,
-               likes: 45,
-               isRecommended: false,
-               description: "Explore the ancient Pyramids of Giza up close.")
-]
+// MARK: - Datum
+nonisolated struct ExperienceDatum: Codable, Identifiable {
+    let id, title: String?
+    let coverPhoto: String?
+    let description: String?
+    let viewsNo, likesNo, recommended: Int?
+    let city: City?
+    let isLiked: Bool?
+
+    enum CodingKeys: String, CodingKey {
+        case id, title
+        case coverPhoto = "cover_photo"
+        case description
+        case viewsNo = "views_no"
+        case likesNo = "likes_no"
+        case recommended, city
+        case isLiked = "is_liked"
+    }
+}
+
+// MARK: - City
+struct City: Codable {
+    let id: Int?
+    let name: String?
+    let topPick: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name
+        case topPick = "top_pick"
+    }
+}
+
+
+
+
+let mockData = ExperienceDatum(
+    id: "1",
+    title: "Nubian House",
+    coverPhoto: "nubian",
+    description: "Traditional Nubian house experience",
+    viewsNo: 156,
+    likesNo: 372,
+    recommended: 1,
+    city: City(id: 1, name: "Aswan", topPick: 1),
+    isLiked: false
+)

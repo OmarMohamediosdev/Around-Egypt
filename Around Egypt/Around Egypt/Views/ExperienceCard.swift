@@ -6,37 +6,41 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ExperienceCard: View {
-    let experience: Experience
+    let experience: ExperienceDatum
     
     var body: some View {
         VStack {
             ZStack(alignment: .leading) {
-                Image(experience.imageName)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: .infinity, height: 180)
-                    .cornerRadius(16)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(LinearGradient(colors: [.clear, .black.opacity(0.4)], startPoint: .top, endPoint: .bottom))
-                    )
-                    .overlay(
-                        Image("circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50, height: 50)
-                            .tint(Color.white)
-                            .overlay(
-                                Text("360")
-                                    .foregroundColor(.white)
-                            )
-                    )
+                if let cover = experience.coverPhoto, let url = URL(string: cover) {
+                    KFImage(url)
+                        .placeholder { ProgressView() }
+                        .resizable()
+                        .scaledToFill()
+                        .frame(height: 180)
+                        .cornerRadius(16)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(LinearGradient(colors: [.clear, .black.opacity(0.4)], startPoint: .top, endPoint: .bottom))
+                        )
+                        .overlay(
+                            Image(systemName: "circle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                                .foregroundColor(.white)
+                                .overlay(
+                                    Text("360")
+                                        .foregroundColor(.white)
+                                )
+                        )
+                }
                 
                 VStack(alignment: .leading) {
                     HStack {
-                        if experience.isRecommended {
+                        if experience.recommended ?? 0 == 1 {
                             HStack {
                                 Image(systemName: "star.fill")
                                     .resizable()
@@ -69,7 +73,7 @@ struct ExperienceCard: View {
                     Spacer()
                     
                     HStack {
-                        Label("\(experience.views)", systemImage: "eye")
+                        Label("\(experience.viewsNo ?? 0)", systemImage: "eye")
                             .font(.caption)
                             .foregroundColor(.white)
                         Spacer()
@@ -87,22 +91,22 @@ struct ExperienceCard: View {
             }
             
             HStack {
-                Text(experience.title)
-                    .font(.title3)
+                Text(experience.title ?? "")
+                    .font(.headline)
                     .fontWeight(.semibold)
                 
                 Spacer()
                 
-                Label("\(experience.likes)", systemImage: "heart.fill")
+                Label("\(experience.likesNo ?? 0)", systemImage: "heart.fill")
                     .font(.caption)
                     .foregroundColor(.orange)
             }
             .padding()
         }
-        
+        .padding(.horizontal)
     }
 }
 
 #Preview {
-    ExperienceCard(experience: sampleExperiences[0])
+    ExperienceCard(experience: mockData)
 }
