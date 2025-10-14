@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExperienceCardHorizontal: View {
+struct ExperienceCard: View {
     let experience: Experience
     
     var body: some View {
@@ -16,7 +16,7 @@ struct ExperienceCardHorizontal: View {
                 Image(experience.imageName)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 300, height: 180)
+                    .frame(width: .infinity, height: 180)
                     .cornerRadius(16)
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
@@ -27,6 +27,7 @@ struct ExperienceCardHorizontal: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 50, height: 50)
+                            .tint(Color.white)
                             .overlay(
                                 Text("360")
                                     .foregroundColor(.white)
@@ -96,11 +97,12 @@ struct ExperienceCardHorizontal: View {
                     .font(.caption)
                     .foregroundColor(.orange)
             }
+            .padding()
         }
         
     }
 }
 
 #Preview {
-    ExperienceCardHorizontal(experience: sampleExperiences[0])
+    ExperienceCard(experience: sampleExperiences[0])
 }

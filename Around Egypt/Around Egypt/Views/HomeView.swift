@@ -41,19 +41,38 @@ struct HomeView: View {
                     .padding(.horizontal)
                     
                     // Recommended section
-                    Text("Recommended Experiences")
-                        .font(.headline)
-                        .padding(.horizontal)
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 16) {
-                            ForEach(recommended) { item in
-                                ExperienceCardHorizontal(experience: item)
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Recommended Experiences")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .padding(.horizontal)
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 16) {
+                                ForEach(recommended) { item in
+                                    ExperienceCard(experience: item)
+                                }
                             }
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
                     }
                     
+                    // Recommended section
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Most Recent")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .padding(.horizontal)
+                        
+                        ScrollView(.vertical, showsIndicators: false) {
+                            VStack(spacing: 16) {
+                                ForEach(recent) { item in
+                                    ExperienceCard(experience: item)
+                                }
+                            }
+                            .padding(.horizontal)
+                        }
+                    }
                 }
             }
             .navigationBarHidden(true)
