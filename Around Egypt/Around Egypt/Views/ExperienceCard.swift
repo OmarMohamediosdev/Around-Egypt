@@ -105,7 +105,8 @@ struct ExperienceCard: View {
                         .resizable()
                         .frame(width: 20, height: 20)
                         .font(.caption)
-                        .foregroundColor(.orange)
+                        .foregroundColor(experience.isLiked ?? false ? .orange : .white)
+                        .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 0)
                 }
             }
             .padding()
