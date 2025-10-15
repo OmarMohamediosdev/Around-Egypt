@@ -11,10 +11,12 @@ import Kingfisher
 struct ExperienceCard: View {
     let experience: ExperienceDatum
     let likeAction: () -> Void
+    let onSelect: () -> Void
     
-    init(experience: ExperienceDatum, likeAction: @escaping () -> Void = {}) {
+    init(experience: ExperienceDatum, likeAction: @escaping () -> Void = {}, onSelect: @escaping () -> Void = {}) {
         self.experience = experience
         self.likeAction = likeAction
+        self.onSelect = onSelect
     }
     
     var body: some View {
@@ -31,7 +33,7 @@ struct ExperienceCard: View {
                         .cornerRadius(16)
                         .overlay(
                             RoundedRectangle(cornerRadius: 16)
-                                .fill(LinearGradient(colors: [.clear, .black.opacity(0.4)], startPoint: .top, endPoint: .bottom))
+                                .fill(LinearGradient(colors: [.black.opacity(0.2), .black.opacity(0.4)], startPoint: .top, endPoint: .bottom))
                         )
                         .overlay(
                             Image(systemName: "circle")
@@ -121,9 +123,13 @@ struct ExperienceCard: View {
             .padding()
         }
         .padding(.horizontal)
+        .onTapGesture { onSelect() }
     }
 }
 
 #Preview {
-    ExperienceCard(experience: mockData)
+    ZStack {
+        Color(.black).opacity(0.2).edgesIgnoringSafeArea(.all)
+        ExperienceCard(experience: mockData)
+    }
 }

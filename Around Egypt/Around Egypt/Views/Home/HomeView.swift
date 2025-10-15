@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
+    @State private var selectedExperience: ExperienceDatum?
     @State private var searchText = ""
     
     var body: some View {
@@ -56,14 +57,18 @@ struct HomeView: View {
                     
                     // Body
                     if viewModel.isSearching {
-                        SearchResultsView(viewModel: viewModel)
+                        SearchResultsView(viewModel: viewModel, selectedExperience: $selectedExperience)
                     } else {
-                        HomeContentView(viewModel: viewModel)
+                        HomeContentView(viewModel: viewModel, selectedExperience: $selectedExperience)
                     }
                     
                 }
             }
-//            .navigationBarHidden(true)
+            .sheet(item: $selectedExperience) { experience in
+                ExperienceView(experience: experience)
+                    .presentationDetents([.fraction(1), .large])
+                    .presentationDragIndicator(.visible)
+            }
         }
     }
 }

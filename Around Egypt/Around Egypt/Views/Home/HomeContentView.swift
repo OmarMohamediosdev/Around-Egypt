@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeContentView: View {
     @ObservedObject var viewModel: HomeViewModel
+    @Binding var selectedExperience: ExperienceDatum?
     
     var body: some View {
         ScrollView {
@@ -39,6 +40,8 @@ struct HomeContentView: View {
                                 ForEach(viewModel.recommended) { exp in
                                     ExperienceCard(experience: exp, likeAction: {
                                         viewModel.likeExperience(exp)
+                                    }, onSelect: {
+                                        selectedExperience = exp
                                     })
                                     .frame(width: 390, height: .infinity)
                                 }
@@ -58,9 +61,11 @@ struct HomeContentView: View {
                     ScrollView(showsIndicators: false) {
                         VStack(spacing: 16) {
                             ForEach(viewModel.recent) { exp in
-                                ExperienceCard(experience: exp) {
+                                ExperienceCard(experience: exp, likeAction: {
                                     viewModel.likeExperience(exp)
-                                }
+                                }, onSelect: {
+                                    selectedExperience = exp
+                                })
                             }
                         }
                     }
@@ -72,5 +77,5 @@ struct HomeContentView: View {
 
 
 #Preview {
-    HomeContentView(viewModel: HomeViewModel())
+    HomeContentView(viewModel: HomeViewModel(), selectedExperience: .constant(nil))
 }

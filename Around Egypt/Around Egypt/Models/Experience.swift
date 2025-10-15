@@ -45,6 +45,8 @@ struct City: Codable {
     }
 }
 
+
+// MARK: - Mock for Previews
 let mockData = ExperienceDatum(
     id: "1",
     title: "Nubian House",

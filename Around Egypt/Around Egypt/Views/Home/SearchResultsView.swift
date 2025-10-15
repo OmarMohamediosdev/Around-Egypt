@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchResultsView: View {
     @ObservedObject var viewModel: HomeViewModel
+    @Binding var selectedExperience: ExperienceDatum?
     
     var body: some View {
         ScrollView {
@@ -21,9 +22,11 @@ struct SearchResultsView: View {
             } else {
                 VStack(spacing: 16) {
                     ForEach(viewModel.searchResults) { exp in
-                        ExperienceCard(experience: exp) {
+                        ExperienceCard(experience: exp, likeAction: {
                             viewModel.likeExperience(exp)
-                        }
+                        }, onSelect: {
+                            selectedExperience = exp
+                        })
                     }
                 }
                 .padding(.horizontal)
@@ -33,5 +36,5 @@ struct SearchResultsView: View {
 }
 
 #Preview {
-    SearchResultsView(viewModel: HomeViewModel())
+    SearchResultsView(viewModel: HomeViewModel(), selectedExperience: .constant(nil))
 }

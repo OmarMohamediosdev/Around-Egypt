@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07684FE52EA035A90016461E /* ExperienceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684FE42EA035A90016461E /* ExperienceHeader.swift */; };
 		07C565A02E9EDB370004EDFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C5659E2E9EDB370004EDFD /* Assets.xcassets */; };
 		07C565A12E9EDB370004EDFD /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C565982E9EDB370004EDFD /* Experience.swift */; };
 		07C565A22E9EDB370004EDFD /* ExperienceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C5659A2E9EDB370004EDFD /* ExperienceCard.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07684FE42EA035A90016461E /* ExperienceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceHeader.swift; sourceTree = "<group>"; };
 		07B463412E9D858E00827420 /* Around Egypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Around Egypt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C565982E9EDB370004EDFD /* Experience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
 		07C5659A2E9EDB370004EDFD /* ExperienceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCard.swift; sourceTree = "<group>"; };
@@ -128,8 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				07C5659B2E9EDB370004EDFD /* HomeView.swift */,
-				9A9260CA2E9FA6A7004F2863 /* SearchResultsView.swift */,
 				9A9260CC2E9FA75C004F2863 /* HomeContentView.swift */,
+				9A9260CA2E9FA6A7004F2863 /* SearchResultsView.swift */,
 				07C5659A2E9EDB370004EDFD /* ExperienceCard.swift */,
 			);
 			path = Home;
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				9A2FFF842E9FD15000E13217 /* ExperienceView.swift */,
+				07684FE42EA035A90016461E /* ExperienceHeader.swift */,
 			);
 			path = Experience;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				07C565A22E9EDB370004EDFD /* ExperienceCard.swift in Sources */,
 				9A2FFF892E9FDE0A00E13217 /* CacheManager.swift in Sources */,
 				07C565A32E9EDB370004EDFD /* HomeView.swift in Sources */,
+				07684FE52EA035A90016461E /* ExperienceHeader.swift in Sources */,
 				07C565A42E9EDB370004EDFD /* Around_EgyptApp.swift in Sources */,
 				9A9260CD2E9FA75C004F2863 /* HomeContentView.swift in Sources */,
 			);

@@ -6,13 +6,81 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ExperienceView: View {
+    let experience: ExperienceDatum
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .leading, spacing: 0) {
+                
+                // MARK: - Header Image
+                ExperienceHeader(experience: experience)
+                
+                // MARK: - Details Section
+                VStack(alignment: .leading, spacing: 8) {
+                    // Title + like/share
+                    HStack(alignment: .top) {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(experience.title ?? "Experience")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.primary)
+                            if let city = experience.city?.name {
+                                Text(city)
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                        Spacer()
+                        HStack(spacing: 12) {
+                            Button(action: {
+                                // TODO: Share functionality
+                            }) {
+                                Image(systemName: "square.and.arrow.up")
+                                    .font(.body)
+                                    .foregroundColor(.orange)
+                            }
+                            
+                            HStack(spacing: 4) {
+                                Image(systemName: "heart.fill")
+                                    .foregroundColor(.orange)
+                                Text("\(experience.likesNo ?? 0)")
+                                    .font(.subheadline)
+                                    .foregroundColor(.primary)
+                            }
+                        }
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 16)
+                    
+                    Divider()
+                        .padding(.horizontal)
+                        .padding(.vertical, 8)
+                    
+                    // Description Section
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Description")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                        Text(experience.description ?? "No description available.")
+                            .font(.body)
+                            .foregroundColor(.secondary)
+                            .lineSpacing(4)
+                    }
+                    .padding(.horizontal)
+                    .padding(.bottom, 24)
+                }
+            }
+        }
+        // Sheet-style presentation
+        .presentationDetents([.fraction(0.7), .large])
+        .presentationDragIndicator(.visible)
     }
+    
 }
 
 #Preview {
-    ExperienceView()
+    ExperienceView(experience: mockData)
 }
