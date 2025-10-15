@@ -21,9 +21,11 @@ class HomeViewModel: ObservableObject {
     
     private let apiService: APIServiceProtocol
     private var cancellables = Set<AnyCancellable>()
+    private let cache = CacheManager.shared
     
     init(apiService: APIServiceProtocol = APIService()) {
         self.apiService = apiService
+        loadCachedData()
         setupSearchObserver()
         fetchData()
     }
@@ -40,7 +42,11 @@ class HomeViewModel: ObservableObject {
                 switch result {
                 case .success(let data):
                     self?.recommended = data.data ?? []
+                    self?.cache.save(data, to: "recommended_cache.json")
                 case .failure(let error):
+                    if let cached: Experience = self?.cache.load(from: "recommended_cache.json", as: Experience.self) {
+                        self?.recommended = cached.data ?? []
+                    }
                     self?.errorMessage = error.localizedDescription
                 }
             }
@@ -54,7 +60,11 @@ class HomeViewModel: ObservableObject {
                 switch result {
                 case .success(let data):
                     self?.recent = data.data ?? []
+                    self?.cache.save(data, to: "recent_cache.json")
                 case .failure(let error):
+                    if let cached: Experience = self?.cache.load(from: "recent_cache.json", as: Experience.self) {
+                        self?.recent = cached.data ?? []
+                    }
                     self?.errorMessage = error.localizedDescription
                 }
             }
@@ -146,5 +156,15 @@ class HomeViewModel: ObservableObject {
         replace(&recent)
         replace(&recommended)
         replace(&searchResults)
+    }
+    
+    // MARK: - Initial Cache Load (before any API call)
+    private func loadCachedData() {
+        if let cachedRecommended: Experience = cache.load(from: "recommended_cache.json", as: Experience.self) {
+            self.recommended = cachedRecommended.data ?? []
+        }
+        if let cachedRecent: Experience = cache.load(from: "recent_cache.json", as: Experience.self) {
+            self.recent = cachedRecent.data ?? []
+        }
     }
 }
