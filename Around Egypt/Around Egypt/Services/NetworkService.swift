@@ -11,6 +11,7 @@ import Alamofire
 protocol APIServiceProtocol {
     func fetchRecommendedExperiences(completion: @escaping (Result<Experience, Error>) -> Void)
     func fetchRecentExperiences(completion: @escaping (Result<Experience, Error>) -> Void)
+    func likeExperience(id: String, completion: @escaping (Result<Experience, Error>) -> Void)
     func searchExperiences(query: String, completion: @escaping (Result<Experience, Error>) -> Void)
 }
 
@@ -53,6 +54,22 @@ class APIService: APIServiceProtocol {
                 switch response.result {
                 case .success(let experience):
                     completion(.success(experience))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+    }
+    
+    func likeExperience(id: String, completion: @escaping (Result<Experience, Error>) -> Void) {
+        let url = "\(baseURL)/\(id)/like"
+        
+        // Send POST request to like endpoint
+        AF.request(url, method: .post)
+            .validate()
+            .responseDecodable(of: Experience.self) { response in
+                switch response.result {
+                case .success(let experience):
+                    completion(.success(experience)) // return updated experience
                 case .failure(let error):
                     completion(.failure(error))
                 }

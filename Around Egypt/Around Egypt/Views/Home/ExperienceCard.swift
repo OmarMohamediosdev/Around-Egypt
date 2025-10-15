@@ -10,6 +10,12 @@ import Kingfisher
 
 struct ExperienceCard: View {
     let experience: ExperienceDatum
+    let likeAction: () -> Void
+    
+    init(experience: ExperienceDatum, likeAction: @escaping () -> Void = {}) {
+        self.experience = experience
+        self.likeAction = likeAction
+    }
     
     var body: some View {
         VStack {
@@ -101,12 +107,15 @@ struct ExperienceCard: View {
                         .font(.headline)
                         .fontWeight(.semibold)
                     
-                    Image(systemName: "heart.fill")
-                        .resizable()
-                        .frame(width: 20, height: 20)
-                        .font(.caption)
-                        .foregroundColor(experience.isLiked ?? false ? .orange : .white)
-                        .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 0)
+                    Button(action: likeAction) {
+                            Image(systemName: "heart.fill")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .font(.caption)
+                            .foregroundColor(experience.isLiked ?? false ? .orange : .gray.opacity(0.6))
+                            .animation(.easeInOut(duration: 0.2), value: experience.isLiked)
+                        }
+                        .buttonStyle(.plain)
                 }
             }
             .padding()

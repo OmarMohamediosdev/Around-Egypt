@@ -37,8 +37,10 @@ struct HomeContentView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 16) {
                                 ForEach(viewModel.recommended) { exp in
-                                    ExperienceCard(experience: exp)
-                                        .frame(width: 390, height: .infinity)
+                                    ExperienceCard(experience: exp, likeAction: {
+                                        viewModel.likeExperience(exp)
+                                    })
+                                    .frame(width: 390, height: .infinity)
                                 }
                             }
                         }
@@ -56,7 +58,9 @@ struct HomeContentView: View {
                     ScrollView(showsIndicators: false) {
                         VStack(spacing: 16) {
                             ForEach(viewModel.recent) { exp in
-                                ExperienceCard(experience: exp)
+                                ExperienceCard(experience: exp) {
+                                    viewModel.likeExperience(exp)
+                                }
                             }
                         }
                     }

@@ -21,7 +21,9 @@ struct SearchResultsView: View {
             } else {
                 VStack(spacing: 16) {
                     ForEach(viewModel.searchResults) { exp in
-                        ExperienceCard(experience: exp)
+                        ExperienceCard(experience: exp) {
+                            viewModel.likeExperience(exp)
+                        }
                     }
                 }
                 .padding(.horizontal)

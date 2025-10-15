@@ -17,9 +17,10 @@ nonisolated struct ExperienceDatum: Codable, Identifiable {
     let id, title: String?
     let coverPhoto: String?
     let description: String?
-    let viewsNo, likesNo, recommended: Int?
+    let viewsNo, recommended: Int?
     let city: City?
-    let isLiked: Bool?
+    var likesNo: Int?
+    var isLiked: Bool?
 
     enum CodingKeys: String, CodingKey {
         case id, title
@@ -44,17 +45,14 @@ struct City: Codable {
     }
 }
 
-
-
-
 let mockData = ExperienceDatum(
     id: "1",
     title: "Nubian House",
     coverPhoto: "nubian",
     description: "Traditional Nubian house experience",
     viewsNo: 156,
-    likesNo: 372,
     recommended: 1,
     city: City(id: 1, name: "Aswan", topPick: 1),
+    likesNo: 372,
     isLiked: false
 )
