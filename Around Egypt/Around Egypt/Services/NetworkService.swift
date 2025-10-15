@@ -11,13 +11,12 @@ import Alamofire
 protocol APIServiceProtocol {
     func fetchRecommendedExperiences(completion: @escaping (Result<Experience, Error>) -> Void)
     func fetchRecentExperiences(completion: @escaping (Result<Experience, Error>) -> Void)
-//    func likeExperience(id: String, completion: @escaping (Result<Experience, Error>) -> Void)
     func searchExperiences(query: String, completion: @escaping (Result<Experience, Error>) -> Void)
 }
 
 class APIService: APIServiceProtocol {
     private let baseURL = "https://aroundegypt.34ml.com/api/v2/experiences"
-
+    
     func fetchRecommendedExperiences(completion: @escaping (Result<Experience, Error>) -> Void) {
         let url = "\(baseURL)?filter[recommended]=true"
         AF.request(url)
@@ -31,7 +30,7 @@ class APIService: APIServiceProtocol {
                 }
             }
     }
-
+    
     func fetchRecentExperiences(completion: @escaping (Result<Experience, Error>) -> Void) {
         AF.request(baseURL)
             .validate()
@@ -44,19 +43,19 @@ class APIService: APIServiceProtocol {
                 }
             }
     }
-
+    
     func searchExperiences(query: String, completion: @escaping (Result<Experience, Error>) -> Void) {
-            let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-            let url = "\(baseURL)?filter[title]=\(encodedQuery)"
-            AF.request(url)
-                .validate()
-                .responseDecodable(of: Experience.self) { response in
-                    switch response.result {
-                    case .success(let experience):
-                        completion(.success(experience))
-                    case .failure(let error):
-                        completion(.failure(error))
-                    }
+        let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let url = "\(baseURL)?filter[title]=\(encodedQuery)"
+        AF.request(url)
+            .validate()
+            .responseDecodable(of: Experience.self) { response in
+                switch response.result {
+                case .success(let experience):
+                    completion(.success(experience))
+                case .failure(let error):
+                    completion(.failure(error))
                 }
-        }
+            }
+    }
 }
