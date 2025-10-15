@@ -11,7 +11,8 @@ import Alamofire
 protocol APIServiceProtocol {
     func fetchRecommendedExperiences(completion: @escaping (Result<Experience, Error>) -> Void)
     func fetchRecentExperiences(completion: @escaping (Result<Experience, Error>) -> Void)
-    func likeExperience(id: String, completion: @escaping (Result<Experience, Error>) -> Void)
+//    func likeExperience(id: String, completion: @escaping (Result<Experience, Error>) -> Void)
+    func searchExperiences(query: String, completion: @escaping (Result<Experience, Error>) -> Void)
 }
 
 class APIService: APIServiceProtocol {
@@ -44,17 +45,18 @@ class APIService: APIServiceProtocol {
             }
     }
 
-    func likeExperience(id: String, completion: @escaping (Result<Experience, Error>) -> Void) {
-        let url = "\(baseURL)/\(id)/like"
-        AF.request(url, method: .post)
-            .validate()
-            .responseDecodable(of: Experience.self) { response in
-                switch response.result {
-                case .success(let experience):
-                    completion(.success(experience))
-                case .failure(let error):
-                    completion(.failure(error))
+    func searchExperiences(query: String, completion: @escaping (Result<Experience, Error>) -> Void) {
+            let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            let url = "\(baseURL)?filter[title]=\(encodedQuery)"
+            AF.request(url)
+                .validate()
+                .responseDecodable(of: Experience.self) { response in
+                    switch response.result {
+                    case .success(let experience):
+                        completion(.success(experience))
+                    case .failure(let error):
+                        completion(.failure(error))
+                    }
                 }
-            }
-    }
+        }
 }

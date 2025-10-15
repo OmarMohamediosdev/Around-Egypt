@@ -15,6 +15,8 @@
 		07C565AA2E9EDEBD0004EDFD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C565A92E9EDEBD0004EDFD /* NetworkService.swift */; };
 		07C565AC2E9EE22E0004EDFD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C565AB2E9EE2290004EDFD /* HomeViewModel.swift */; };
 		41407D22841C4232F1FAB2E9 /* Pods_Around_Egypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52391044C2E57A96DBA69AC /* Pods_Around_Egypt.framework */; };
+		9A9260CB2E9FA6A7004F2863 /* SearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9260CA2E9FA6A7004F2863 /* SearchResultsView.swift */; };
+		9A9260CD2E9FA75C004F2863 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9260CC2E9FA75C004F2863 /* HomeContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		07C565AB2E9EE2290004EDFD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		67B6D9FBA2C1F1058AA644A1 /* Pods-Around Egypt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Around Egypt.debug.xcconfig"; path = "Target Support Files/Pods-Around Egypt/Pods-Around Egypt.debug.xcconfig"; sourceTree = "<group>"; };
 		846E530326BE7EF269461E98 /* Pods-Around Egypt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Around Egypt.release.xcconfig"; path = "Target Support Files/Pods-Around Egypt/Pods-Around Egypt.release.xcconfig"; sourceTree = "<group>"; };
+		9A9260CA2E9FA6A7004F2863 /* SearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsView.swift; sourceTree = "<group>"; };
+		9A9260CC2E9FA75C004F2863 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 		A52391044C2E57A96DBA69AC /* Pods_Around_Egypt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Around_Egypt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +84,8 @@
 		07C5659C2E9EDB370004EDFD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9A9260CA2E9FA6A7004F2863 /* SearchResultsView.swift */,
+				9A9260CC2E9FA75C004F2863 /* HomeContentView.swift */,
 				07C5659A2E9EDB370004EDFD /* ExperienceCard.swift */,
 				07C5659B2E9EDB370004EDFD /* HomeView.swift */,
 			);
@@ -222,9 +228,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Around Egypt/Pods-Around Egypt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Around Egypt/Pods-Around Egypt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -240,10 +250,12 @@
 			files = (
 				07C565AC2E9EE22E0004EDFD /* HomeViewModel.swift in Sources */,
 				07C565AA2E9EDEBD0004EDFD /* NetworkService.swift in Sources */,
+				9A9260CB2E9FA6A7004F2863 /* SearchResultsView.swift in Sources */,
 				07C565A12E9EDB370004EDFD /* Experience.swift in Sources */,
 				07C565A22E9EDB370004EDFD /* ExperienceCard.swift in Sources */,
 				07C565A32E9EDB370004EDFD /* HomeView.swift in Sources */,
 				07C565A42E9EDB370004EDFD /* Around_EgyptApp.swift in Sources */,
+				9A9260CD2E9FA75C004F2863 /* HomeContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

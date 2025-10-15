@@ -68,9 +68,7 @@ struct ExperienceCard: View {
                             .scaledToFill()
                             .frame(width: 15, height: 15)
                             .foregroundColor(.white)
-                            
                     }
-                    
                     
                     Spacer()
                     
@@ -78,6 +76,7 @@ struct ExperienceCard: View {
                         Label("\(experience.viewsNo ?? 0)", systemImage: "eye")
                             .font(.caption)
                             .foregroundColor(.white)
+                        
                         Spacer()
                         
                         Image(systemName: "photo.on.rectangle")
@@ -86,8 +85,6 @@ struct ExperienceCard: View {
                             .frame(width: 15, height: 15)
                             .foregroundColor(.white)
                     }
-                    
-                    
                 }
                 .padding(12)
             }

@@ -24,10 +24,17 @@ struct HomeView: View {
                         
                         HStack {
                             Image(systemName: "magnifyingglass")
-                            TextField("Try “Luxor”", text: .constant(""))
-                                .textFieldStyle(PlainTextFieldStyle())
-                                .padding()
+                            
+                            TextField("Try “Luxor”", text: $viewModel.searchText, onCommit: {
+                                if !searchText.isEmpty {
+                                    viewModel.searchExperiences(searchText)
+                                }
+                            })
+                            .textInputAutocapitalization(.never)
+                            .disableAutocorrection(true)
                         }
+                        .textFieldStyle(PlainTextFieldStyle())
+                        .padding()
                         .background(Color(.systemGray6))
                         .cornerRadius(12)
                         
@@ -37,53 +44,13 @@ struct HomeView: View {
                     }
                     .padding(.horizontal)
                     
-                    // Welcome text
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("Welcome!")
-                            .font(.title2)
-                            .bold()
-                        Text("Now you can explore any experience in 360 degrees and get all the details about it all in one place.")
-                            .font(.subheadline)
-                    }
-                    .padding(.leading)
-                    
-                    // Recommended section
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text("Recommended Experiences")
-                            .font(.title2)
-                            .fontWeight(.bold)
-                            .padding(.horizontal)
-                        
-                        if viewModel.isLoading {
-                            ProgressView().padding()
-                        } else {
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack(spacing: 16) {
-                                    ForEach(viewModel.recommended) { exp in
-                                        ExperienceCard(experience: exp)
-                                            .frame(width: 390, height: .infinity)
-                                    }
-                                }
-                            }
-                        }
-                        
+                    // Body
+                    if viewModel.isSearching {
+                        SearchResultsView(viewModel: viewModel)
+                    } else {
+                        HomeContentView(viewModel: viewModel)
                     }
                     
-                    // Recent section
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text("Most Recent")
-                            .font(.title2)
-                            .fontWeight(.bold)
-                            .padding(.leading, 25)
-                        
-                        ScrollView(showsIndicators: false) {
-                            VStack(spacing: 16) {
-                                ForEach(viewModel.recent) { exp in
-                                    ExperienceCard(experience: exp)
-                                }
-                            }
-                        }
-                    }
                 }
             }
 //            .navigationBarHidden(true)
