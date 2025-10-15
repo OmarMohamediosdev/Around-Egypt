@@ -94,8 +94,9 @@ class HomeViewModel: ObservableObject {
     }
     
     func clearSearch() {
-        isSearching = false
+        searchText = ""
         searchResults.removeAll()
+        isSearching = false
     }
     
     func likeExperience(_ experience: ExperienceDatum) {

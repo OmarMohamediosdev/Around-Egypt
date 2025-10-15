@@ -121,10 +121,10 @@
 		9A2FFF832E9FCDAA00E13217 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				07C5659B2E9EDB370004EDFD /* HomeView.swift */,
 				9A9260CA2E9FA6A7004F2863 /* SearchResultsView.swift */,
 				9A9260CC2E9FA75C004F2863 /* HomeContentView.swift */,
 				07C5659A2E9EDB370004EDFD /* ExperienceCard.swift */,
-				07C5659B2E9EDB370004EDFD /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";

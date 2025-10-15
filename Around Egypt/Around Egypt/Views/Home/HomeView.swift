@@ -32,6 +32,17 @@ struct HomeView: View {
                             })
                             .textInputAutocapitalization(.never)
                             .disableAutocorrection(true)
+                            
+                            if !viewModel.searchText.isEmpty {
+                                Button(action: {
+                                    viewModel.clearSearch()
+                                }) {
+                                    Image(systemName: "xmark.circle.fill")
+                                        .foregroundColor(.gray)
+                                }
+                                .transition(.opacity)
+                                .animation(.easeInOut(duration: 0.2), value: viewModel.searchText)
+                            }
                         }
                         .padding()
                         .background(Color(.systemGray6))
