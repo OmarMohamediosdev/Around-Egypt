@@ -33,7 +33,6 @@ struct HomeView: View {
                             .textInputAutocapitalization(.never)
                             .disableAutocorrection(true)
                         }
-                        .textFieldStyle(PlainTextFieldStyle())
                         .padding()
                         .background(Color(.systemGray6))
                         .cornerRadius(12)
