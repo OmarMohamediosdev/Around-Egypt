@@ -20,7 +20,7 @@ struct ExperienceView: View {
                 
                 // MARK: - Details Section
                 VStack(alignment: .leading, spacing: 8) {
-                    // Title + like/share
+                    // Title
                     HStack(alignment: .top) {
                         VStack(alignment: .leading, spacing: 4) {
                             Text(experience.title ?? "Experience")
@@ -33,13 +33,15 @@ struct ExperienceView: View {
                                     .foregroundColor(.secondary)
                             }
                         }
+                        
                         Spacer()
+                        
+                        // like + share
                         HStack(spacing: 12) {
                             Button(action: {
                                 // TODO: Share functionality
                             }) {
                                 Image(systemName: "square.and.arrow.up")
-                                    .font(.body)
                                     .foregroundColor(.orange)
                             }
                             
@@ -47,10 +49,10 @@ struct ExperienceView: View {
                                 Image(systemName: "heart.fill")
                                     .foregroundColor(.orange)
                                 Text("\(experience.likesNo ?? 0)")
-                                    .font(.subheadline)
                                     .foregroundColor(.primary)
                             }
                         }
+                        .font(.title2)
                     }
                     .padding(.horizontal)
                     .padding(.top, 16)
@@ -64,6 +66,7 @@ struct ExperienceView: View {
                         Text("Description")
                             .font(.headline)
                             .fontWeight(.bold)
+                        
                         Text(experience.description ?? "No description available.")
                             .font(.body)
                             .foregroundColor(.secondary)

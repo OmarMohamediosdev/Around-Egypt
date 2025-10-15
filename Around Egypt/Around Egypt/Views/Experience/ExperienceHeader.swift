@@ -44,13 +44,6 @@ struct ExperienceHeader: View {
                     .frame(height: 280)
             }
             
-            // Overlay gradient
-//            LinearGradient(
-//                gradient: Gradient(colors: [.black.opacity(0.2), .black.opacity(0.4)]),
-//                startPoint: .bottom, endPoint: .center
-//            )
-            
-            
             // Bottom overlay info
             HStack {
                 Label("\(experience.viewsNo ?? 0) views", systemImage: "eye")
