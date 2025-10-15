@@ -132,7 +132,7 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    // MARK: - Local update helpers (same as before)
+    // MARK: - Local update helpers
     private func updateLocalLike(for id: String, liked: Bool) {
         func update(_ list: inout [ExperienceDatum]) {
             if let index = list.firstIndex(where: { $0.id == id }) {
@@ -166,5 +166,9 @@ class HomeViewModel: ObservableObject {
         if let cachedRecent: Experience = cache.load(from: "recent_cache.json", as: Experience.self) {
             self.recent = cachedRecent.data ?? []
         }
+    }
+    
+    var allExperiences: [ExperienceDatum] {
+        recommended + recent + searchResults
     }
 }

@@ -110,11 +110,11 @@ struct ExperienceCard: View {
                         .fontWeight(.semibold)
                     
                     Button(action: likeAction) {
-                            Image(systemName: "heart.fill")
+                        Image(systemName: experience.isLiked ?? false ? "heart.fill" : "heart")
                             .resizable()
                             .frame(width: 20, height: 20)
                             .font(.caption)
-                            .foregroundColor(experience.isLiked ?? false ? .orange : .gray.opacity(0.6))
+                            .foregroundColor(.orange)
                             .animation(.easeInOut(duration: 0.2), value: experience.isLiked)
                         }
                         .buttonStyle(.plain)

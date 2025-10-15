@@ -8,6 +8,5 @@ target 'Around Egypt' do
 
   pod 'Alamofire'
   pod 'Kingfisher'
-  pod 'RealmSwift'
 
 end

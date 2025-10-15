@@ -65,7 +65,7 @@ struct HomeView: View {
                 }
             }
             .sheet(item: $selectedExperience) { experience in
-                ExperienceView(experience: experience)
+                ExperienceView(viewModel: viewModel, experienceID: experience.id ?? "")
                     .presentationDetents([.fraction(1), .large])
                     .presentationDragIndicator(.visible)
             }
