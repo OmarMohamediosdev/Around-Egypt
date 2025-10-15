@@ -52,6 +52,7 @@ struct HomeView: View {
                         Text("Recommended Experiences")
                             .font(.title2)
                             .fontWeight(.bold)
+                            .padding(.horizontal)
                         
                         if viewModel.isLoading {
                             ProgressView().padding()
@@ -60,13 +61,13 @@ struct HomeView: View {
                                 HStack(spacing: 16) {
                                     ForEach(viewModel.recommended) { exp in
                                         ExperienceCard(experience: exp)
+                                            .frame(width: 390, height: .infinity)
                                     }
                                 }
                             }
                         }
                         
                     }
-                    .padding()
                     
                     // Recent section
                     VStack(alignment: .leading, spacing: 5) {
@@ -85,7 +86,7 @@ struct HomeView: View {
                     }
                 }
             }
-            .navigationBarHidden(true)
+//            .navigationBarHidden(true)
         }
     }
 }
