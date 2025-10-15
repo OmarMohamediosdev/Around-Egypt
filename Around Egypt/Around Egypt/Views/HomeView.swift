@@ -35,7 +35,7 @@ struct HomeView: View {
                         
                         Spacer()
                     }
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal)
                     
                     // Welcome text
                     VStack(alignment: .leading, spacing: 4) {
@@ -45,7 +45,7 @@ struct HomeView: View {
                         Text("Now you can explore any experience in 360 degrees and get all the details about it all in one place.")
                             .font(.subheadline)
                     }
-                    .padding(.leading, 25)
+                    .padding(.leading)
                     
                     // Recommended section
                     VStack(alignment: .leading, spacing: 5) {
@@ -66,7 +66,7 @@ struct HomeView: View {
                         }
                         
                     }
-                    .padding(.horizontal, 25)
+                    .padding()
                     
                     // Recent section
                     VStack(alignment: .leading, spacing: 5) {

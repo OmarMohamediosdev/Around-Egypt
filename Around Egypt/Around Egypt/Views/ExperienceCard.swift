@@ -18,8 +18,10 @@ struct ExperienceCard: View {
                     KFImage(url)
                         .placeholder { ProgressView() }
                         .resizable()
-                        .scaledToFill()
+//                        .scaledToFill()
                         .frame(height: 180)
+                        .frame(maxWidth: .infinity)
+                        .clipped()
                         .cornerRadius(16)
                         .overlay(
                             RoundedRectangle(cornerRadius: 16)
@@ -97,9 +99,17 @@ struct ExperienceCard: View {
                 
                 Spacer()
                 
-                Label("\(experience.likesNo ?? 0)", systemImage: "heart.fill")
-                    .font(.caption)
-                    .foregroundColor(.orange)
+                HStack {
+                    Text("\(experience.likesNo ?? 0)")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                    
+                    Image(systemName: "heart.fill")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .font(.caption)
+                        .foregroundColor(.orange)
+                }
             }
             .padding()
         }
