@@ -60,9 +60,11 @@ struct ExperienceView: View {
                                     HStack(spacing: 4) {
                                         Image(systemName: experience.isLiked ?? false ? "heart.fill" : "heart")
                                             .foregroundColor(.orange)
+                                            .accessibilityIdentifier("sheetHeart_\(experience.id ?? "")")
                                         
                                         Text("\(experience.likesNo ?? 0)")
                                             .foregroundColor(.primary)
+                                            .accessibilityIdentifier("sheetLikesLabel_\(experience.id ?? "")")
                                     }
                                 }
                                 .buttonStyle(.plain)

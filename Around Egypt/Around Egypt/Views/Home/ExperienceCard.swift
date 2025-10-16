@@ -108,6 +108,7 @@ struct ExperienceCard: View {
                     Text("\(experience.likesNo ?? 0)")
                         .font(.headline)
                         .fontWeight(.semibold)
+                        .accessibilityIdentifier("likesLabel_\(experience.id ?? "")")
                     
                     Button(action: likeAction) {
                         Image(systemName: experience.isLiked ?? false ? "heart.fill" : "heart")
@@ -119,11 +120,13 @@ struct ExperienceCard: View {
                         }
                         .buttonStyle(.plain)
                 }
+                .accessibilityIdentifier("heartButton_\(experience.id ?? "")")
             }
             .padding()
         }
         .padding(.horizontal)
         .onTapGesture { onSelect() }
+        .accessibilityIdentifier("card_\(experience.id ?? "")")
     }
 }
 

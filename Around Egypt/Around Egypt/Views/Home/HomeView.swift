@@ -33,6 +33,7 @@ struct HomeView: View {
                             })
                             .textInputAutocapitalization(.never)
                             .disableAutocorrection(true)
+                            .accessibilityIdentifier("searchTextField")
                             
                             if !viewModel.searchText.isEmpty {
                                 Button(action: {
