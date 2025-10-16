@@ -41,6 +41,17 @@
                ReferencedContainer = "container:Around Egypt.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "076DAE3B2EA12BBA00448CDD"
+               BuildableName = "Around EgyptUnitTests.xctest"
+               BlueprintName = "Around EgyptUnitTests"
+               ReferencedContainer = "container:Around Egypt.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

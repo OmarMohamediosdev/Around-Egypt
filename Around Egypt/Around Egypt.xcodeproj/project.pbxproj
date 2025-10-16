@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07684FE52EA035A90016461E /* ExperienceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684FE42EA035A90016461E /* ExperienceHeader.swift */; };
+		076DAE612EA1315700448CDD /* Pods_Around_Egypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52391044C2E57A96DBA69AC /* Pods_Around_Egypt.framework */; };
 		07C565A02E9EDB370004EDFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C5659E2E9EDB370004EDFD /* Assets.xcassets */; };
 		07C565A12E9EDB370004EDFD /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C565982E9EDB370004EDFD /* Experience.swift */; };
 		07C565A22E9EDB370004EDFD /* ExperienceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C5659A2E9EDB370004EDFD /* ExperienceCard.swift */; };
@@ -30,11 +31,33 @@
 			remoteGlobalIDString = 07B463402E9D858E00827420;
 			remoteInfo = "Around Egypt";
 		};
+		076DAE402EA12BBA00448CDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07B463392E9D858E00827420 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07B463402E9D858E00827420;
+			remoteInfo = "Around Egypt";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		07684FE42EA035A90016461E /* ExperienceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceHeader.swift; sourceTree = "<group>"; };
 		076DAE2D2EA113C200448CDD /* Around EgyptUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Around EgyptUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE3C2EA12BBA00448CDD /* Around EgyptUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Around EgyptUnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE4B2EA1302C00448CDD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE4C2EA1302C00448CDD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE522EA1304800448CDD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE562EA1304C00448CDD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE592EA1309400448CDD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE5B2EA1309400448CDD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE5D2EA1314100448CDD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE5F2EA1314100448CDD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE622EA1316900448CDD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE642EA1316900448CDD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE662EA1317900448CDD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE682EA1317900448CDD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE6A2EA1319E00448CDD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		076DAE6B2EA1319E00448CDD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B463412E9D858E00827420 /* Around Egypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Around Egypt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C565982E9EDB370004EDFD /* Experience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
 		07C5659A2E9EDB370004EDFD /* ExperienceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCard.swift; sourceTree = "<group>"; };
@@ -58,6 +81,11 @@
 			path = "Around EgyptUITests";
 			sourceTree = "<group>";
 		};
+		076DAE3D2EA12BBA00448CDD /* Around EgyptUnitTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Around EgyptUnitTests";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +93,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076DAE392EA12BBA00448CDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076DAE612EA1315700448CDD /* Pods_Around_Egypt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +118,20 @@
 		00353D6DB2787ED39CCAF255 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				076DAE6A2EA1319E00448CDD /* Alamofire.framework */,
+				076DAE6B2EA1319E00448CDD /* Kingfisher.framework */,
+				076DAE662EA1317900448CDD /* Alamofire.framework */,
+				076DAE682EA1317900448CDD /* Kingfisher.framework */,
+				076DAE622EA1316900448CDD /* Alamofire.framework */,
+				076DAE642EA1316900448CDD /* Kingfisher.framework */,
+				076DAE5D2EA1314100448CDD /* Alamofire.framework */,
+				076DAE5F2EA1314100448CDD /* Kingfisher.framework */,
+				076DAE592EA1309400448CDD /* Alamofire.framework */,
+				076DAE5B2EA1309400448CDD /* Kingfisher.framework */,
+				076DAE562EA1304C00448CDD /* Kingfisher.framework */,
+				076DAE522EA1304800448CDD /* Alamofire.framework */,
+				076DAE4B2EA1302C00448CDD /* Alamofire.framework */,
+				076DAE4C2EA1302C00448CDD /* Kingfisher.framework */,
 				A52391044C2E57A96DBA69AC /* Pods_Around_Egypt.framework */,
 			);
 			name = Frameworks;
@@ -92,6 +142,7 @@
 			children = (
 				07C5659F2E9EDB370004EDFD /* Around Egypt */,
 				076DAE2E2EA113C200448CDD /* Around EgyptUITests */,
+				076DAE3D2EA12BBA00448CDD /* Around EgyptUnitTests */,
 				07B463422E9D858E00827420 /* Products */,
 				E51897D85DE2EEC8D32BDC6C /* Pods */,
 				00353D6DB2787ED39CCAF255 /* Frameworks */,
@@ -103,6 +154,7 @@
 			children = (
 				07B463412E9D858E00827420 /* Around Egypt.app */,
 				076DAE2D2EA113C200448CDD /* Around EgyptUITests.xctest */,
+				076DAE3C2EA12BBA00448CDD /* Around EgyptUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +269,29 @@
 			productReference = 076DAE2D2EA113C200448CDD /* Around EgyptUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		076DAE3B2EA12BBA00448CDD /* Around EgyptUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076DAE422EA12BBA00448CDD /* Build configuration list for PBXNativeTarget "Around EgyptUnitTests" */;
+			buildPhases = (
+				076DAE382EA12BBA00448CDD /* Sources */,
+				076DAE392EA12BBA00448CDD /* Frameworks */,
+				076DAE3A2EA12BBA00448CDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				076DAE412EA12BBA00448CDD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				076DAE3D2EA12BBA00448CDD /* Around EgyptUnitTests */,
+			);
+			name = "Around EgyptUnitTests";
+			packageProductDependencies = (
+			);
+			productName = "Around EgyptUnitTests";
+			productReference = 076DAE3C2EA12BBA00448CDD /* Around EgyptUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		07B463402E9D858E00827420 /* Around Egypt */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07B4634C2E9D859200827420 /* Build configuration list for PBXNativeTarget "Around Egypt" */;
@@ -250,6 +325,10 @@
 						CreatedOnToolsVersion = 26.0.1;
 						TestTargetID = 07B463402E9D858E00827420;
 					};
+					076DAE3B2EA12BBA00448CDD = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 07B463402E9D858E00827420;
+					};
 					07B463402E9D858E00827420 = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
@@ -271,12 +350,20 @@
 			targets = (
 				07B463402E9D858E00827420 /* Around Egypt */,
 				076DAE2C2EA113C200448CDD /* Around EgyptUITests */,
+				076DAE3B2EA12BBA00448CDD /* Around EgyptUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		076DAE2B2EA113C200448CDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076DAE3A2EA12BBA00448CDD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -347,6 +434,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		076DAE382EA12BBA00448CDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07B4633D2E9D858E00827420 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,6 +466,11 @@
 			isa = PBXTargetDependency;
 			target = 07B463402E9D858E00827420 /* Around Egypt */;
 			targetProxy = 076DAE332EA113C200448CDD /* PBXContainerItemProxy */;
+		};
+		076DAE412EA12BBA00448CDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07B463402E9D858E00827420 /* Around Egypt */;
+			targetProxy = 076DAE402EA12BBA00448CDD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -427,6 +526,62 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "Around Egypt";
+			};
+			name = Release;
+		};
+		076DAE432EA12BBA00448CDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2J622XBF9N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.around.egypt.Around-EgyptUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Around Egypt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Around Egypt";
+			};
+			name = Debug;
+		};
+		076DAE442EA12BBA00448CDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2J622XBF9N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.around.egypt.Around-EgyptUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Around Egypt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Around Egypt";
 			};
 			name = Release;
 		};
@@ -641,6 +796,15 @@
 			buildConfigurations = (
 				076DAE352EA113C200448CDD /* Debug */,
 				076DAE362EA113C200448CDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		076DAE422EA12BBA00448CDD /* Build configuration list for PBXNativeTarget "Around EgyptUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076DAE432EA12BBA00448CDD /* Debug */,
+				076DAE442EA12BBA00448CDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
