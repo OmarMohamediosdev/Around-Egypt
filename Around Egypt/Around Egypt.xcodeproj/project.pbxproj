@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07684FE52EA035A90016461E /* ExperienceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07684FE42EA035A90016461E /* ExperienceHeader.swift */; };
-		076DAE612EA1315700448CDD /* Pods_Around_Egypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52391044C2E57A96DBA69AC /* Pods_Around_Egypt.framework */; };
 		07C565A02E9EDB370004EDFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C5659E2E9EDB370004EDFD /* Assets.xcassets */; };
 		07C565A12E9EDB370004EDFD /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C565982E9EDB370004EDFD /* Experience.swift */; };
 		07C565A22E9EDB370004EDFD /* ExperienceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C5659A2E9EDB370004EDFD /* ExperienceCard.swift */; };
@@ -16,7 +15,8 @@
 		07C565A42E9EDB370004EDFD /* Around_EgyptApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C5659D2E9EDB370004EDFD /* Around_EgyptApp.swift */; };
 		07C565AA2E9EDEBD0004EDFD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C565A92E9EDEBD0004EDFD /* NetworkService.swift */; };
 		07C565AC2E9EE22E0004EDFD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C565AB2E9EE2290004EDFD /* HomeViewModel.swift */; };
-		41407D22841C4232F1FAB2E9 /* Pods_Around_Egypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52391044C2E57A96DBA69AC /* Pods_Around_Egypt.framework */; };
+		52097D6139DEC02A1999F6B9 /* Pods_Around_EgyptUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041C5EAF00D22B20CFE6D825 /* Pods_Around_EgyptUnitTests.framework */; };
+		8A91624737D73E22EFE4C389 /* Pods_Around_Egypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FD508D39DACAD18634DD2E /* Pods_Around_Egypt.framework */; };
 		9A2FFF852E9FD15000E13217 /* ExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FFF842E9FD15000E13217 /* ExperienceView.swift */; };
 		9A2FFF892E9FDE0A00E13217 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FFF882E9FDE0900E13217 /* CacheManager.swift */; };
 		9A9260CB2E9FA6A7004F2863 /* SearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9260CA2E9FA6A7004F2863 /* SearchResultsView.swift */; };
@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041C5EAF00D22B20CFE6D825 /* Pods_Around_EgyptUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Around_EgyptUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07684FE42EA035A90016461E /* ExperienceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceHeader.swift; sourceTree = "<group>"; };
 		076DAE2D2EA113C200448CDD /* Around EgyptUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Around EgyptUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		076DAE3C2EA12BBA00448CDD /* Around EgyptUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Around EgyptUnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,23 +67,29 @@
 		07C5659E2E9EDB370004EDFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07C565A92E9EDEBD0004EDFD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		07C565AB2E9EE2290004EDFD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		67B6D9FBA2C1F1058AA644A1 /* Pods-Around Egypt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Around Egypt.debug.xcconfig"; path = "Target Support Files/Pods-Around Egypt/Pods-Around Egypt.debug.xcconfig"; sourceTree = "<group>"; };
-		846E530326BE7EF269461E98 /* Pods-Around Egypt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Around Egypt.release.xcconfig"; path = "Target Support Files/Pods-Around Egypt/Pods-Around Egypt.release.xcconfig"; sourceTree = "<group>"; };
+		3973AD10D8B449257FD5CA99 /* Pods-Around Egypt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Around Egypt.debug.xcconfig"; path = "Target Support Files/Pods-Around Egypt/Pods-Around Egypt.debug.xcconfig"; sourceTree = "<group>"; };
 		9A2FFF842E9FD15000E13217 /* ExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceView.swift; sourceTree = "<group>"; };
 		9A2FFF882E9FDE0900E13217 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		9A9260CA2E9FA6A7004F2863 /* SearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsView.swift; sourceTree = "<group>"; };
 		9A9260CC2E9FA75C004F2863 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
-		A52391044C2E57A96DBA69AC /* Pods_Around_Egypt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Around_Egypt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A05306A9CAE2E0FB35CE73A8 /* Pods-Around Egypt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Around Egypt.release.xcconfig"; path = "Target Support Files/Pods-Around Egypt/Pods-Around Egypt.release.xcconfig"; sourceTree = "<group>"; };
+		A1FD508D39DACAD18634DD2E /* Pods_Around_Egypt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Around_Egypt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA92B808ED3A6A4CEC307745 /* Pods-Around EgyptUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Around EgyptUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-Around EgyptUnitTests/Pods-Around EgyptUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED0C5FC69AF50CF15969D2C1 /* Pods-Around EgyptUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Around EgyptUnitTests.release.xcconfig"; path = "Target Support Files/Pods-Around EgyptUnitTests/Pods-Around EgyptUnitTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		076DAE2E2EA113C200448CDD /* Around EgyptUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = "Around EgyptUITests";
 			sourceTree = "<group>";
 		};
 		076DAE3D2EA12BBA00448CDD /* Around EgyptUnitTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = "Around EgyptUnitTests";
 			sourceTree = "<group>";
 		};
@@ -100,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				076DAE612EA1315700448CDD /* Pods_Around_Egypt.framework in Frameworks */,
+				52097D6139DEC02A1999F6B9 /* Pods_Around_EgyptUnitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41407D22841C4232F1FAB2E9 /* Pods_Around_Egypt.framework in Frameworks */,
+				8A91624737D73E22EFE4C389 /* Pods_Around_Egypt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +139,8 @@
 				076DAE522EA1304800448CDD /* Alamofire.framework */,
 				076DAE4B2EA1302C00448CDD /* Alamofire.framework */,
 				076DAE4C2EA1302C00448CDD /* Kingfisher.framework */,
-				A52391044C2E57A96DBA69AC /* Pods_Around_Egypt.framework */,
+				A1FD508D39DACAD18634DD2E /* Pods_Around_Egypt.framework */,
+				041C5EAF00D22B20CFE6D825 /* Pods_Around_EgyptUnitTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -237,8 +245,10 @@
 		E51897D85DE2EEC8D32BDC6C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				67B6D9FBA2C1F1058AA644A1 /* Pods-Around Egypt.debug.xcconfig */,
-				846E530326BE7EF269461E98 /* Pods-Around Egypt.release.xcconfig */,
+				3973AD10D8B449257FD5CA99 /* Pods-Around Egypt.debug.xcconfig */,
+				A05306A9CAE2E0FB35CE73A8 /* Pods-Around Egypt.release.xcconfig */,
+				CA92B808ED3A6A4CEC307745 /* Pods-Around EgyptUnitTests.debug.xcconfig */,
+				ED0C5FC69AF50CF15969D2C1 /* Pods-Around EgyptUnitTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -263,8 +273,6 @@
 				076DAE2E2EA113C200448CDD /* Around EgyptUITests */,
 			);
 			name = "Around EgyptUITests";
-			packageProductDependencies = (
-			);
 			productName = "Around EgyptUITests";
 			productReference = 076DAE2D2EA113C200448CDD /* Around EgyptUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -273,6 +281,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 076DAE422EA12BBA00448CDD /* Build configuration list for PBXNativeTarget "Around EgyptUnitTests" */;
 			buildPhases = (
+				ACA80A0DFE2CF26845D63BAA /* [CP] Check Pods Manifest.lock */,
 				076DAE382EA12BBA00448CDD /* Sources */,
 				076DAE392EA12BBA00448CDD /* Frameworks */,
 				076DAE3A2EA12BBA00448CDD /* Resources */,
@@ -286,8 +295,6 @@
 				076DAE3D2EA12BBA00448CDD /* Around EgyptUnitTests */,
 			);
 			name = "Around EgyptUnitTests";
-			packageProductDependencies = (
-			);
 			productName = "Around EgyptUnitTests";
 			productReference = 076DAE3C2EA12BBA00448CDD /* Around EgyptUnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -296,11 +303,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07B4634C2E9D859200827420 /* Build configuration list for PBXNativeTarget "Around Egypt" */;
 			buildPhases = (
-				42906435DAF8681217D02DD4 /* [CP] Check Pods Manifest.lock */,
+				D70DE934A11E262B3862FBF1 /* [CP] Check Pods Manifest.lock */,
 				07B4633D2E9D858E00827420 /* Sources */,
 				07B4633E2E9D858E00827420 /* Frameworks */,
 				07B4633F2E9D858E00827420 /* Resources */,
-				7A991674EA5EC53A2729A5E7 /* [CP] Embed Pods Frameworks */,
+				F17E8205EC64C54BF57A8E40 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -381,7 +388,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42906435DAF8681217D02DD4 /* [CP] Check Pods Manifest.lock */ = {
+		ACA80A0DFE2CF26845D63BAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Around EgyptUnitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D70DE934A11E262B3862FBF1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -403,21 +432,17 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7A991674EA5EC53A2729A5E7 /* [CP] Embed Pods Frameworks */ = {
+		F17E8205EC64C54BF57A8E40 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Around Egypt/Pods-Around Egypt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Around Egypt/Pods-Around Egypt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -531,6 +556,7 @@
 		};
 		076DAE432EA12BBA00448CDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA92B808ED3A6A4CEC307745 /* Pods-Around EgyptUnitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -559,6 +585,7 @@
 		};
 		076DAE442EA12BBA00448CDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED0C5FC69AF50CF15969D2C1 /* Pods-Around EgyptUnitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -708,7 +735,7 @@
 		};
 		07B4634D2E9D859200827420 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67B6D9FBA2C1F1058AA644A1 /* Pods-Around Egypt.debug.xcconfig */;
+			baseConfigurationReference = 3973AD10D8B449257FD5CA99 /* Pods-Around Egypt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -749,7 +776,7 @@
 		};
 		07B4634E2E9D859200827420 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 846E530326BE7EF269461E98 /* Pods-Around Egypt.release.xcconfig */;
+			baseConfigurationReference = A05306A9CAE2E0FB35CE73A8 /* Pods-Around Egypt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

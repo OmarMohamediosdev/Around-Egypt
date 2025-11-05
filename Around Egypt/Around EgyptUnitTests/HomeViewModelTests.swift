@@ -25,7 +25,7 @@ final class HomeViewModelTests: XCTestCase {
         super.tearDown()
     }
     
-    @MainActor func test_fetchData_populatesRecommendedAndRecent() {
+    func test_fetchData_populatesRecommendedAndRecent() {
         // Given: fake data
         let datum = ExperienceDatum(
             id: "1",
@@ -57,7 +57,7 @@ final class HomeViewModelTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
     
-    @MainActor func test_likeExperience_updatesLocalAndCallsAPI() {
+    func test_likeExperience_updatesLocalAndCallsAPI() {
         // Given
         let datum = ExperienceDatum(
             id: "100",
@@ -94,7 +94,7 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertEqual(mockService.likeCalledWith, "100")
     }
     
-    @MainActor func test_searchExperiences_returnsResults() {
+    func test_searchExperiences_returnsResults() {
         // Given
         let datum = ExperienceDatum(
             id: "200",
@@ -122,7 +122,7 @@ final class HomeViewModelTests: XCTestCase {
         waitForExpectations(timeout: 1)
     }
 
-    @MainActor func test_loadCachedData_loadsFilesIfTheyExist() {
+    func test_loadCachedData_loadsFilesIfTheyExist() async {
         let datum = ExperienceDatum(
             id: "300",
             title: "Abu Simbel",
@@ -139,7 +139,7 @@ final class HomeViewModelTests: XCTestCase {
         CacheManager.shared.save(experience, to: "recent_cache.json")
 
         // When
-        sut = HomeViewModel(apiService: mockService)
+        sut = await MainActor.run { HomeViewModel(apiService: mockService) }
         // Then
         XCTAssertEqual(sut.recommended.first?.id, "300")
         XCTAssertEqual(sut.recent.first?.id, "300")
